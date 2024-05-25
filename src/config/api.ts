@@ -4,7 +4,16 @@ import type { UniversityListResponse } from "@types";
 import { slugify } from "@utils";
 
 async function fetchMyList() {
-	return fetch(LIST_API_URL).then((res) => res.json());
+	// try fetching from LIST_API_URL if failed get from /list.json
+	try {
+		const response = await fetch(LIST_API_URL);
+		if (!response.ok) {
+			throw new Error("Network response was not ok");
+		}
+		return response.json();
+	} catch (error) {
+		console.error("There was a problem with your fetch operation:", error);
+	}
 }
 
 export function useListingData(options?: Partial<UseQueryOptions<UniversityListResponse>>) {
