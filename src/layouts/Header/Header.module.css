@@ -1,0 +1,10 @@
+.header {
+	inline-size: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--header-bg);
+	border-bottom: 1px solid var(--header-border-color);
+	block-size: var(--header-height);
+	padding-inline: var(--container-padding-x);
+}
