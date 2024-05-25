@@ -25,7 +25,7 @@ const ListPage = () => {
 
 	return (
 		<article className={"flex flex-col gap-5 flex-1 h-full"}>
-			<section className={"py-3 rounded-md flex justify-between"}>
+			<section className={"py-3 rounded-md flex flex-wrap justify-between"}>
 				<aside>
 					<input
 						type="search"
@@ -43,6 +43,7 @@ const ListPage = () => {
 					<div className="inline-flex rounded-md shadow-sm" role="group">
 						<button
 							type="button"
+							title={"Sort ascending"}
 							onClick={() => {
 								setSort("asc");
 								handleSort("asc");
@@ -51,10 +52,10 @@ const ListPage = () => {
 								sort === "asc" ? "z-10 ring-2 ring-blue-700 text-blue-700" : ""
 							}`}>
 							<AscIcon className={"mie-1"} />
-							<span>Ascending</span>
 						</button>
 						<button
 							type="button"
+							title={"Sort descending"}
 							onClick={() => {
 								setSort("desc");
 								handleSort("desc");
@@ -63,7 +64,6 @@ const ListPage = () => {
 								sort === "desc" ? "z-10 ring-2 ring-blue-700 text-blue-700" : ""
 							}`}>
 							<DescIcon className={"mie-1"} />
-							<span>Descending</span>
 						</button>
 					</div>
 				</aside>
