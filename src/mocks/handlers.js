@@ -4,9 +4,9 @@ import list from "./list.json";
 
 export const handlers = [
 	http.get(LIST_API_URL, () => {
-		return HttpResponse.json({});
+		return HttpResponse.json(list);
 	}),
 	http.get("/list.json", () => {
-		return HttpResponse.json({});
+		return HttpResponse.json(list);
 	}),
 ];

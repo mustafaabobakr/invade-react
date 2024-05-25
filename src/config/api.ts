@@ -3,19 +3,22 @@ import { LIST_API_URL, QUERY_KEYS } from "@config";
 import type { UniversityListResponse } from "@types";
 import { slugify } from "@utils";
 
+async function fetchMyListLocal() {
+	const localData = await fetch("/list.json").then((response) => response.json());
+	return localData as UniversityListResponse;
+}
+
 async function fetchMyList() {
 	// try fetching from LIST_API_URL if failed get from /list.json
 	try {
 		const response = await fetch(LIST_API_URL);
 		if (!response.ok) {
-			const localData = await fetch("/list.json").then((response) => response.json());
-			return localData;
+			return await fetchMyListLocal();
 		}
 		return response.json();
 	} catch (error) {
 		console.error("There was a problem with your fetch operation:", error);
-		const localData = await fetch("/list.json").then((response) => response.json());
-		return localData;
+		return await fetchMyListLocal();
 	}
 }
 
