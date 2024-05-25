@@ -37,6 +37,24 @@
  </tr>
 </table>
 
+![desktop](https://github.com/mustafaabobakr/invade-react/assets/27288406/87df0fc9-abe0-4dc6-92bb-e5b219ed1736)
+
+<table>
+ <tr>
+  <th>Sort ascending</th>
+  <th>Sort descending</th>
+ </tr>
+ <tr>
+  <td>
+    <img width="600" alt="Sort ascending" src="https://github.com/mustafaabobakr/invade-react/assets/27288406/8e3ee001-7840-438d-8b2d-76ed8f9ecde4">
+  </td>
+  <td>
+    <img width="600" alt="Sort descending" src="https://github.com/mustafaabobakr/invade-react/assets/27288406/f4c9d44d-08e2-4e25-9456-8ddef71cf319">
+  </td>
+ </tr>
+</table>
+
+
 ## Getting Started
 
 1. First, install the dependencies:
@@ -78,8 +96,5 @@
    ```
 
 
-![desktop](https://github.com/mustafaabobakr/invade-react/assets/27288406/87df0fc9-abe0-4dc6-92bb-e5b219ed1736)
 
-
-![mobile](https://github.com/mustafaabobakr/invade-react/assets/27288406/8e3ee001-7840-438d-8b2d-76ed8f9ecde4)
 
