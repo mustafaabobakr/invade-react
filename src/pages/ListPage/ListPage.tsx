@@ -51,7 +51,7 @@ const ListPage = () => {
 							className={`inline-flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 ${
 								sort === "asc" ? "z-10 ring-2 ring-blue-700 text-blue-700" : ""
 							}`}>
-							<AscIcon className={"mie-1"} />
+							<AscIcon />
 						</button>
 						<button
 							type="button"
@@ -63,7 +63,7 @@ const ListPage = () => {
 							className={`px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 ${
 								sort === "desc" ? "z-10 ring-2 ring-blue-700 text-blue-700" : ""
 							}`}>
-							<DescIcon className={"mie-1"} />
+							<DescIcon />
 						</button>
 					</div>
 				</aside>
