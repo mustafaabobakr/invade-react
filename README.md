@@ -1,30 +1,78 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  INVADE React
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Build with
 
-Currently, two official plugins are available:
+<table>
+ <tr>
+  <td>
+  
+![Vite](https://img.shields.io/badge/Vite-%2306468E.svg?style=for-the-badge&logo=vite&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  </td>
+  <td>
+  
+![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-%231a202c.svg?style=for-the-badge&logo=tailwind-css)
 
-## Expanding the ESLint configuration
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+![React Router](https://img.shields.io/badge/React_Router-%23CA4245.svg?style=for-the-badge&logo=react-router&logoColor=white)
+![React Query](https://img.shields.io/badge/React_Query-%2314151A.svg?style=for-the-badge&logo=react-query&logoColor=%23F4B30D)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  </td>
+  <td>
+  
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![Playwright](https://img.shields.io/badge/-playwright-%23022506?style=for-the-badge&logo=playwright)
 
-- Configure the top-level `parserOptions` property like this:
+  </td>
+ </tr>
+</table>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Getting Started
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. First, install the dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+2. Run the development server:
+
+   ```bash
+   pnpm dev
+   ```
+
+   Open [http://localhost:5173](http://localhost:5173)
+
+3. Run the test:
+
+   ```bash
+   pnpm test
+   ```
+
+   Run the test in watch mode:
+
+   ```bash
+   pnpm test:watch
+   ```
+
+   Run the test with coverage:
+
+   ```bash
+   pnpm test:coverage
+   ```
+
+4. Build the project:
+
+   ```bash
+    pnpm build
+   ```
