@@ -14,6 +14,8 @@ async function fetchMyList() {
 		return response.json();
 	} catch (error) {
 		console.error("There was a problem with your fetch operation:", error);
+		const localData = await fetch("/list.json").then((response) => response.json());
+		return localData;
 	}
 }
 
