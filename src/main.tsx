@@ -11,21 +11,34 @@ import "./index.css";
 
 const { persister, queryClient } = initReactQuery();
 
+async function enableMocking() {
+	if (process.env.NODE_ENV !== "development") {
+		return;
+	}
+
+	const { worker } = await import("./mocks/browser.js");
+
+	// `worker.start()` returns a Promise that resolves
+	// once the Service Worker is up and ready to intercept requests.
+	return worker.start();
+}
 const rootEl = document.getElementById("root") ?? document.body.appendChild(document.createElement("div"));
 
-ReactDOM.createRoot(rootEl).render(
-	<React.StrictMode>
-		<PersistQueryClientProvider client={queryClient} persistOptions={{ persister }}>
-			<BrowserRouter>
-				<Routes>
-					<Route element={<PageLayout />}>
-						<Route path="/" element={<ListPage />} />
-						<Route path="/list" element={<ListPage />} />
-						<Route path="/details/:detailsId" element={<DetailsPage />} />
-					</Route>
-				</Routes>
-			</BrowserRouter>
-			<ReactQueryDevtools initialIsOpen={false} />
-		</PersistQueryClientProvider>
-	</React.StrictMode>
-);
+enableMocking().then(() => {
+	ReactDOM.createRoot(rootEl).render(
+		<React.StrictMode>
+			<PersistQueryClientProvider client={queryClient} persistOptions={{ persister }}>
+				<BrowserRouter>
+					<Routes>
+						<Route element={<PageLayout />}>
+							<Route path="/" element={<ListPage />} />
+							<Route path="/list" element={<ListPage />} />
+							<Route path="/details/:detailsId" element={<DetailsPage />} />
+						</Route>
+					</Routes>
+				</BrowserRouter>
+				<ReactQueryDevtools initialIsOpen={false} />
+			</PersistQueryClientProvider>
+		</React.StrictMode>
+	);
+});
