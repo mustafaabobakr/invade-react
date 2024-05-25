@@ -15,9 +15,12 @@ const ListPage = () => {
 	if (isLoading) {
 		return <Skeleton count={36} />;
 	}
-
 	if (error) {
-		return <div data-testid="Error">Error: {error.message}</div>;
+		return (
+			<div data-testid="Error" className={"h-full flex-1 flex justify-center items-center"}>
+				<h1 className={"text-3xl"}>Error: {error.message}</h1>
+			</div>
+		);
 	}
 
 	return (

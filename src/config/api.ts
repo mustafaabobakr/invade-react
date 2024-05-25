@@ -8,7 +8,8 @@ async function fetchMyList() {
 	try {
 		const response = await fetch(LIST_API_URL);
 		if (!response.ok) {
-			return fetch("/list.json");
+			const localData = await fetch("/list.json").then((response) => response.json());
+			return localData;
 		}
 		return response.json();
 	} catch (error) {
