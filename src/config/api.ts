@@ -8,7 +8,7 @@ async function fetchMyList() {
 	try {
 		const response = await fetch(LIST_API_URL);
 		if (!response.ok) {
-			throw new Error("Network response was not ok");
+			return fetch("/list.json");
 		}
 		return response.json();
 	} catch (error) {
