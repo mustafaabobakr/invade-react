@@ -31,7 +31,6 @@
   <td>
   
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
-![Playwright](https://img.shields.io/badge/-playwright-%23022506?style=for-the-badge&logo=playwright)
 
   </td>
  </tr>
