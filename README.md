@@ -4,7 +4,7 @@
 
 ## Build with
 
-<table>
+<table  align="center">
  <tr>
   <td>
   
@@ -54,7 +54,6 @@
  </tr>
 </table>
 
-
 ## Getting Started
 
 1. First, install the dependencies:
@@ -94,7 +93,3 @@
    ```bash
     pnpm build
    ```
-
-
-
-

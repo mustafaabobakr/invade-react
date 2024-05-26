@@ -44,6 +44,7 @@ const ListPage = () => {
 						<button
 							type="button"
 							title={"Sort ascending"}
+							disabled={!data || data.length === 0}
 							onClick={() => {
 								setSort("asc");
 								handleSort("asc");
@@ -56,6 +57,7 @@ const ListPage = () => {
 						<button
 							type="button"
 							title={"Sort descending"}
+							disabled={!data || data.length === 0}
 							onClick={() => {
 								setSort("desc");
 								handleSort("desc");

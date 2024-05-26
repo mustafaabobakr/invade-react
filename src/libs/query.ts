@@ -1,14 +1,16 @@
-import { QueryClient } from "@tanstack/react-query";
+import { QueryClient, type QueryClientConfig } from "@tanstack/react-query";
 import { persistQueryClient } from "@tanstack/react-query-persist-client";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 
-export default function initReactQuery() {
+export default function initReactQuery(config: QueryClientConfig["defaultOptions"]) {
 	const queryClient = new QueryClient({
 		defaultOptions: {
+			...config,
 			queries: {
 				// FIXME: update according to the business requirements.
 				staleTime: Number.POSITIVE_INFINITY,
 				gcTime: Number.POSITIVE_INFINITY,
+				...config?.queries,
 			},
 		},
 	});
